@@ -1,0 +1,25 @@
+{
+  "name": "microservicios-t1",
+  "version": "1.0.0",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LizethDanielaV/Microservicios-T1.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/LizethDanielaV/Microservicios-T1/issues"
+  },
+  "homepage": "https://github.com/LizethDanielaV/Microservicios-T1#readme",
+  "description": "",
+  "dependencies": {
+    "express": "^5.1.0",
+    "mysql2": "^3.14.3",
+    "sequelize": "^6.37.7"
+  }
+}
