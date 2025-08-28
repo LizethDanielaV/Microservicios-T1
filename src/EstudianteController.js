@@ -5,8 +5,8 @@ async function registrar(req, res) {
         const estudiante = await EstudianteService.registrar(
             req.body.codigo, 
             req.body.nombre, 
-            req.body.cedula, 
             req.body.correo, 
+            req.body.cedula, 
             req.body.fecha_nacimiento, 
             req.body.carrera
         );
