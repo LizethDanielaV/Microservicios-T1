@@ -1,17 +1,19 @@
 import Estudiante from "./Estudiante.js";
 
-async function registrar(codigo, nombre, correo, cedula, fecha_nacimiento, carrera) {
-    if(!codigo || !nombre || !correo || !fecha_nacimiento || !carrera || !cedula){
+async function registrar(codigo, nombre, apellido, correo, documento, fecha_nacimiento, carrera) {
+    if (!codigo || !nombre || !apellido || !correo || !fecha_nacimiento || !carrera || !documento) {
         throw new Error("No se aceptan campos vacios");
     }
     try {
         const estudiante = await Estudiante.create({
             codigo: codigo,
             nombre: nombre,
-            correo: correo, 
-            cedula: cedula, 
-            fecha_nacimiento: fecha_nacimiento, 
+            apellido: apellido,
+            correo: correo,
+            documento: documento,
+            fecha_nacimiento: fecha_nacimiento,
             carrera: carrera
+            
         })
         return estudiante;
     } catch (error) {
@@ -19,4 +21,14 @@ async function registrar(codigo, nombre, correo, cedula, fecha_nacimiento, carre
     }
 }
 
-export default {registrar};
+
+async function consultar() {
+    try {
+        const estudiantes = await Estudiante.findAll();
+        return estudiantes;
+    } catch (error) {
+        throw error;
+    }
+}
+
+export default { registrar, consultar };

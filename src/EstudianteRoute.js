@@ -4,5 +4,6 @@ import EstudianteController from "./EstudianteController.js";
 const router = Router(); 
 
 router.post("/", EstudianteController.registrar);
+router.get("/", EstudianteController.consultar);
 
 export default router;
