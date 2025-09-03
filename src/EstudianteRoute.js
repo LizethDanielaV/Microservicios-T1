@@ -5,5 +5,6 @@ const router = Router();
 
 router.post("/", EstudianteController.registrar);
 router.get("/", EstudianteController.consultar);
+router.delete("/:codigo", EstudianteController.eliminar);
 
 export default router;

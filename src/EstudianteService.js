@@ -31,4 +31,15 @@ async function consultar() {
     }
 }
 
-export default { registrar, consultar };
+async function eliminar(codigo){
+    try {
+        const resultado = await Estudiante.destroy({
+            where: { codigo: codigo }
+        });
+        return resultado;
+    }catch (error) {
+        throw error;
+    }
+}
+
+export default { registrar, consultar, eliminar };
