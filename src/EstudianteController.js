@@ -12,9 +12,16 @@ async function registrar(req, res) {
             req.body.carrera
             
         );
-        res.status(200).json(estudiante);
+        res.status(200).json({
+            success: true,
+            message: "¡Estudiante registrado correctamente!",
+            estudiante: estudiante
+        });
     } catch (error) {
-        res.status(500).json({ error: error.message });
+        res.status(500).json({ 
+            success: false,
+            error: error.message 
+        });
 
     }
 };

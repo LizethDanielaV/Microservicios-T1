@@ -15,16 +15,16 @@ db.authenticate()
 
 //creacion tabla
 
-// async function main() {
-//   try {
-//     await db.sync({ force: true });
-//     console.log("Tablas creadas exitosamente B)")
-//   } catch (error) {
-//     console.log(error.message);
-//   }
-// }
+async function main() {
+  try {
+    await db.sync({ force: true });
+    console.log("Tablas creadas exitosamente B)")
+  } catch (error) {
+    console.log(error.message);
+  }
+}
 
-// main();
+main();
 
 
 //configuracion del puerto
